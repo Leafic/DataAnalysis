@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>비본데이즈</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/timeline.css">
+  <link rel="stylesheet" href="css/main_style.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+  <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/home_style.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <script>
+    if (location.pathname.indexOf('questions') != -1) {
+  $('#targetListTag').addClass('active');
+  }
+  </script>
+    <!-- 드랍다운 스크립트 -->
+    <script type="text/javascript">
+      function init_dropsdown() {
+        $('#gnb').hover(function () {
+          $('#gnb_sub').fadeIn();
+        },
+          function () {
+            $('#gnb_sub').hide();
+          });
+      }
+      $(document).ready(function () {
+      init_dropsdown();
+    });
+    </script>
+  
+</head>
+
+<body>
+    <div id="headeringwrap">
+        <div id="headering">
+    
+          <!-- 상단 English 부분 
+              <div class="nav1">
+                <a>English</a>
+            </div> -->
+          <div id="gnb">
+            <ul class="gw">
+              <li>
+                <h1>
+                  <a href="beborndays.html"><img src=img/logo.png id=logo></a>
+                </h1>
+              </li>
+              <li><a>Home</a></li>
+              <li><a>Solution</a></li>
+              <li><a>Support</a></li>
+              <li><a>주요사업</a></li>
+              <li><a>Notice</a></li>
+              <li class="headericon"><a><i class="fa fa-search"></i></a></li>
+              <li class="headericon"><a><i class="fa fa-bars"></i></a></li>
+    
+            </ul>
+            <div id="gnb_sub">
+              <ul class="logo-width">
+                <li><img src=img/beborn1.png id=logo style="height:80%"></li>
+              </ul>
+              <ul class="home-width">
+                  <li><a href="beborndaysCEO.html">CEO</a></li>
+                  <li><a href="beborndaysvision.html">회사비전</a></li>
+                  <li><a href="beborndaystimeline.html">일반현황</a></li>
+                  <li><a href="beborndayspeople.html">인재상</a></li>
+                  <li><a href="beborndaysorgan.html">조직도</a></li>
+                  <li><a href="beborndaysmap.html">찾아오시는길</a></li>
+              </ul>
+              <ul class="solution-width">
+                <li><a>현장공정지원시스템(BB SIMS)</a></li>
+                <li><a>시설물관리시스템(BB OMS)</a></li>
+                <li><a>설계/내역지원시스템(BB Design)</a></li>
+                <li><a>통합관제시스템(BB All-IN-OSP)</a></li>
+                <li><a>현장모바일지원시스템(BB Mobile)</a></li>
+                <li><a>현장지원3D시스템(BB 3D)</a></li>
+              </ul>
+              <ul class="support-width">
+                <li><a>시스템 메뉴얼</a></li>
+                <li><a>Demo 동영상</a></li>
+                <li><a>Demo EXE</a></li>
+                <li><a>자재/인건비</a></li>
+                <li><a>사용자 인증</a></li>
+                <li><a>FAQ</a></li>
+              </ul>
+              <ul class="important-width">
+                <li><a>통신시설관련 사업</a></li>
+                <li><a>R&D 연구사업</a></li>
+                <li><a>글로벌 사업</a></li>
+                <li><a>유지보수 사업</a></li>
+              </ul>
+              <ul class="notice-width">
+                <li><a>PRESS</a></li>
+                <li><a>NEW</a></li>
+                <li><a>PROJECT</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <section class="img_section">
+      <img src="img/skyline.PNG" style="padding-top: 8%;">
+    <div class ="img_text">
+    </div>
+  
+  </section> 
+    <section class="content-wrap">
+        <nav>
+            <section class="nav_title">비본데이즈 소개</section>
+            <ul class="menu">
+              <li><input type="radio" name="menuopt1" id="drop1" />
+                <label class="opener" for="drop1"><a>CEO<ion-icon name="add"></ion-icon></a></label>
+                <label class="closer" for="dropclose1"><a>CEO<ion-icon name="remove"></ion-icon></a></label>
+                <ul>
+                  <li><a href="beborndaysCEO.html">인사말</a></li>
+                  <input type="radio" name="menuopt1" id="dropclose1" />
+                </ul>
+      
+              </li>
+              <li><a href="beborndaysvision.html">회사비전</a></li>
+              <li><input type="radio" name="menuopt2" id="drop2" />
+                <label class="opener" for="drop2"><a>일반현황<ion-icon name="add"></ion-icon></a></label>
+                <label class="closer" for="dropclose2"><a>일반현황<ion-icon name="remove"></ion-icon></a></label>
+                <ul>
+                  <li><a href="beborndaystimeline.html">회사연혁</a></li>
+                  <li><a href="beborndaysCI.html">CI / BI 소개</a></li>
+                  <input type="radio" name="menuopt2" id="dropclose2" />
+                </ul>
+              </li>
+              <li><a href="beborndayspeople.html">인재상</a></li>
+              <li><a href="beborndaysorgan.html">조직도</a></li>
+              <li><a href="beborndaysmap.html">찾아오시는 길</a></li>
+            </ul>
+          </nav>
+
+    <article>
+      <h1>회사연혁</h1>
+      <p>
+        <ion-icon name="home"></ion-icon> > 비본데이즈 소개 > 일반현황 > <strong>회사연혁</strong>
+      </p>
+      <hr>
+      <section>
+        <article class="sub_article">
+          <div class="timeline">
+            <div class="container right">
+              <div class="content">
+                <h2>2017~현재</h2>
+                <ul>
+                  <li>차세대선로시스템 취약시설 관리기능 개발</li>
+                  <li>FIPS 설비정보제공시스템(개발/운영) 유지보수</li>
+                  <li>DAS 활용 광코어 DB 정합 기능개발</li>
+                  <li>OSP 선로 IT시스템 기능개선</li>
+                  <li>OSP 선로 통합관리시스템 기능개선</li>
+                  <li>무선광케이블 프로세스 개선을 위한 선로 IT시스템 고도화</li>
+                  <li>설비 정보 제공 시스템 운영 유지보수</li>
+                  <li>통합 미들웨어 고도화 제품 패키징 소프트웨어 계약</li>
+                  <li>광케이블 선로통합관리시스템 DB 최적화를 위한 OSP 시스템 개선</li>
+                  <li class="strong">[국책]재난안전정보 공유 플랫폼 기술 개발(2단계-1차년도)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>2016</h2>
+                <ul>
+                  <li>설비이전 프로세스 개선에 따른 선로 IT시스템 고도화</li>
+                  <li>선로 IT시스템 기능개선 및 운영 유지보수</li>
+                  <li>선로 통합관리시스템 기능개선 및 운영 유지보수</li>
+                  <li>선로 통합관리시스템-ERP연동을 통한 자산관리 프로세스</li>
+                  <li>IT 시스템 고도화 (선로 통합관리시스템 고도화 및 임차점용시설 관리)</li>
+                  <li>IT 시스템 고도화 (중장비 피해예방 CableSniper 솔루션 개발)</li>
+                  <li>설비 정보 제공 시스템 유지보수</li>
+                  <li>회선 개통을 위한 최적 광코어 선정 자동화</li>
+                  <li>U-City 통합플랫폼 2.0 미들웨어 고도화용 S/W 구매</li>
+                  <li class="strong">[국책]재난안전정보 공유 플랫폼 기술 개발(1단계-1차년도)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>2015</h2>
+                <ul>
+                  <li>설비 정보 제공 시스템 개선개발</li>
+                  <li>르완다 oRn 선로 통합 관리시스템구축 사업</li>
+                  <li>OSP_IT시스템 기능개선</li>
+                  <li>초고속FTTH 현장 등록 및 조회를 위한 APP 개발</li>
+                  <li>선로 통합관리시스템 유지보수계약</li>
+                  <li>선로 IT시스템 유지보수계약</li>
+                  <li>구글 맵 변환 시스템 개발</li>
+                </ul>
+              </div>
+            </div>
+            <div class="container right">
+              <div class="content">
+                <h2>2014</h2>
+                <ul>
+                  <li>선로 IT시스템 유지보수 용역계약</li>
+                  <li>선로 통합관리시스템 유지보수 용역계약</li>
+                  <li>통신(유선)장비 집중운용분야 선로 통합관리시스템 유지보수 용역 연장계약</li>
+                  <li>선로 IT시스템 유지보수계약</li>
+                  <li class="strong">[국책] K-MEG에너지 시스템 통합 및 연계 솔루션 연동기능 고도화</li>
+                  <li>IoT 서비스 개발을 위한 코어기술(Data Mash Up 엔진) 개발</li>
+                  <li>인터넷 FTTH 투자 프로세스 정착을 위한 OSPIA 고도화</li>
+                </ul>
+              </div>
+            </div> 
+            <div class="container right">
+              <div class="content">
+                <h2>2013</h2>
+                <ul>
+                  <li>선로 IT시스템 기능개선 및 운영</li>
+                  <li>통신(유선)장비 집중 운용분야 선로 통합관리시스템 유지보수 용역계약</li>
+                  <li>선로 IT시스템 기능개선 및 운영 유지보수</li>
+                  <li>초고속FTTH 수요조사 및 공급프로세스 개선을 위한 선로 IT시스템 고도화</li>
+                  <li>Ubi-Cahn G 현장장치 및 데이터기반 이벤트 생성모듈 개발</li>
+                  <li class="strong">[국책] K-MEG 에너지 시스템 통합 및 연계 솔루션 기능 개선</li>
+                  <li class="strong">[국책] K-MEG 에너지 데이터 분석 및 리포팅 시스템 기능 개선</li>
+                  <li>설비 정보제공시스템 고도화</li>
+                  <li>OSP_IT시스템 기능고도화 및 Cloud전환</li>
+                  <li>GIS 기반의 ITS 엔지니어링 설계 자동화 프랫폼과 고정밀 측위앱 개발</li>
+                </ul>
+              </div>
+            </div> 
+            <div class="container right">
+              <div class="content">
+                <h2>2012</h2>
+                <ul>
+                  <li>•OSP 분야 업무효율성 향상을 위한 운용 체계 고도화</li>
+                  <li class="strong">[국책]K-MEG 시스템 통합 및 연계 솔루션 개발</li>
+                  <li>GIS 기반의 ITS 엔지니어링 설계 자동화 플랫폼과 고정밀 측위앱 개발</li>
+                  <li>BIT-ERP개발에 따른 OSP_IT시스템 고도화</li>
+                  <li>선로 운용지원시스템 유지보수</li>
+                  <li>선로 IT시스템 기능개선 및 운영</li>
+                </ul>
+              </div>
+            </div>
+            <div class="container right">
+                <div class="content">
+                  <h2>~2011</h2>
+                  <ul>
+                    <li>OSP분야 Mobile Working 구현</li>
+                    <li>선로운용지원시스템 유지보수</li>
+                    <li>선로 IT 시스템 고도화</li>
+                    <li class="strong">[국책]UFMS 및 공간정보 플랫폼 개발 및 제품화 시제품 개발</li>
+                    <li>OSP분야 관로/선로 시스템 일원화 및 고도화 사업</li>
+                    <li>선로분야 IT시스템 고도화</li>
+                    <li class="strong">[국책]지능형 국토정보기술 1~5차 혁신사업</li>
+                    <li>설비제공제도 개선에 따른선로 IT 시스템 2차개발</li>
+                    <li>인프라관리시스템 고도화 및 개량개선</li>
+                    <li>차세대 관로 경제성 분석용 툴 개발</li>
+                    <li>선로 통합운영시스템 고도화 사업등 인력용역지원 계약</li>
+                    <li>선로 IT 시스템 작업일보 개발 용역</li>
+                    <li>인프라관리시스템 신규개발 및 개량개선 용역</li>
+                    <li>인프라사업관리시스템(IMS) 효율성 향상 개발</li>
+                  </ul>
+                </div>
+              </div>
+          </div>    
+          <p>OSP (Out Side Plant) : 전형적인 통신회사와 같이, 고객에 대한 서비스의 공급에 공헌하는, 모든 공익사업체의 물리적인 시설 자산에
+              적용되는 일반적인 용어</p>       
+        </article>
+      </section>
+    </article>
+  </section>
+
+  <footer role="footer" data-include="footer.html"></footer>
+</body>
+
+</html>

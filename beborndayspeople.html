@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>비본데이즈</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/main_style.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script> -->
+  <script src="https://unpkg.com/ionicons@4.2.2/dist/ionicons.js"></script>
+  <link rel="stylesheet" href="css/home_style.css">
+  <link href="https://unpkg.com/ionicons@4.2.2/dist/css/ionicons.min.css" rel="stylesheet">
+  <!-- <script src="lib/jquery/jquery.min.js"></script> -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- 무슨 스크립트인지 잘 모르겠음 -->
+  <script>
+    if (location.pathname.indexOf('questions') != -1) {
+  $('#targetListTag').addClass('active');
+  }
+  </script>
+  <!-- 드랍다운 스크립트 -->
+  <script type="text/javascript">
+    function init_dropsdown() {
+      $('#gnb').hover(function () {
+        $('#gnb_sub').fadeIn();
+      },
+        function () {
+          $('#gnb_sub').hide();
+        });
+    }
+    $(document).ready(function () {
+    init_dropsdown();
+  });
+  </script>
+
+
+</head>
+
+<body>
+    <div id="headeringwrap">
+        <div id="headering">
+    
+          <!-- 상단 English 부분 
+              <div class="nav1">
+                <a>English</a>
+            </div> -->
+          <div id="gnb">
+            <ul class="gw">
+              <li>
+                <h1>
+                  <a href="beborndays.html"><img src=img/logo.png id=logo></a>
+                </h1>
+              </li>
+              <li><a>Home</a></li>
+              <li><a>Solution</a></li>
+              <li><a>Support</a></li>
+              <li><a>주요사업</a></li>
+              <li><a>Notice</a></li>
+              <li class="headericon"><a><i class="fa fa-search"></i></a></li>
+              <li class="headericon"><a><i class="fa fa-bars"></i></a></li>
+    
+            </ul>
+            <div id="gnb_sub">
+              <ul class="logo-width">
+                <li><img src=img/beborn1.png id=logo style="height:80%"></li>
+              </ul>
+              <ul class="home-width">
+                  <li><a href="beborndaysCEO.html">CEO</a></li>
+                  <li><a href="beborndaysvision.html">회사비전</a></li>
+                  <li><a href="beborndaystimeline.html">일반현황</a></li>
+                  <li><a href="beborndayspeople.html">인재상</a></li>
+                  <li><a href="beborndaysorgan.html">조직도</a></li>
+                  <li><a href="beborndaysmap.html">찾아오시는길</a></li>
+              </ul>
+              <ul class="solution-width">
+                <li><a>현장공정지원시스템(BB SIMS)</a></li>
+                <li><a>시설물관리시스템(BB OMS)</a></li>
+                <li><a>설계/내역지원시스템(BB Design)</a></li>
+                <li><a>통합관제시스템(BB All-IN-OSP)</a></li>
+                <li><a>현장모바일지원시스템(BB Mobile)</a></li>
+                <li><a>현장지원3D시스템(BB 3D)</a></li>
+              </ul>
+              <ul class="support-width">
+                <li><a>시스템 메뉴얼</a></li>
+                <li><a>Demo 동영상</a></li>
+                <li><a>Demo EXE</a></li>
+                <li><a>자재/인건비</a></li>
+                <li><a>사용자 인증</a></li>
+                <li><a>FAQ</a></li>
+              </ul>
+              <ul class="important-width">
+                <li><a>통신시설관련 사업</a></li>
+                <li><a>R&D 연구사업</a></li>
+                <li><a>글로벌 사업</a></li>
+                <li><a>유지보수 사업</a></li>
+              </ul>
+              <ul class="notice-width">
+                <li><a>PRESS</a></li>
+                <li><a>NEW</a></li>
+                <li><a>PROJECT</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  <section class="img_section">
+      <img src="img/skyline.PNG" style="padding-top: 8%;"> </section> 
+    <section class="content-wrap">
+        <nav>
+            <section class="nav_title">비본데이즈 소개</section>
+            <ul class="menu">
+              <li><input type="radio" name="menuopt1" id="drop1" />
+                <label class="opener" for="drop1"><a>CEO<ion-icon name="add"></ion-icon></a></label>
+                <label class="closer" for="dropclose1"><a>CEO<ion-icon name="remove"></ion-icon></a></label>
+                <ul>
+                  <li><a href="beborndaysCEO.html">인사말</a></li>
+                  <input type="radio" name="menuopt1" id="dropclose1" />
+                </ul>
+      
+              </li>
+              <li><a href="beborndaysvision.html">회사비전</a></li>
+              <li><input type="radio" name="menuopt2" id="drop2" />
+                <label class="opener" for="drop2"><a>일반현황<ion-icon name="add"></ion-icon></a></label>
+                <label class="closer" for="dropclose2"><a>일반현황<ion-icon name="remove"></ion-icon></a></label>
+                <ul>
+                  <li><a href="beborndaystimeline.html">회사연혁</a></li>
+                  <li><a href="beborndaysCI.html">CI / BI 소개</a></li>
+                  <input type="radio" name="menuopt2" id="dropclose2" />
+                </ul>
+              </li>
+              <li><a href="beborndayspeople.html">인재상</a></li>
+              <li><a href="beborndaysorgan.html">조직도</a></li>
+              <li><a href="beborndaysmap.html">찾아오시는 길</a></li>
+            </ul>
+          </nav>
+
+    <article>
+      <h1>인재상</h1>
+      <p>
+          <ion-icon name="home"></ion-icon> > 비본데이즈 소개 > 인재상 
+      </p>
+      <hr>
+      <section>
+        
+        <article>
+          <a href="img/인재상.PNG"><img src=img/인재상.png></a>
+        </article>
+      </section>
+    </article>
+  </section>
+
+  <footer role="footer" data-include="footer.html"></footer>
+
+  <script src="http://code.jquery.com/jquery.min.js"></script>
+  <script>
+    $(function () {
+      includeLayout();
+    });
+    function includeLayout() {
+      var includeArea = $('[data-include]');
+      var self, url;
+      $.each(includeArea, function () {
+        self = $(this);
+        url = self.data("include");
+        self.load(url, function () {
+          self.removeAttr("data-include");
+        });
+      });
+    } 
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,905 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>beborndays company</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+  
+
+  <!-- Favicons -->
+<link href="img/beborn.ico" rel="icon">
+<link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-- Google Fonts Maps -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i"
+  rel="stylesheet">
+<meta name="viewport" content="inital-scale=1.0,user-scalable=no">
+
+<!-- Main Script version-->
+<script src="js/jquery-3.4.1.min.js"></script>
+
+<!-- Bootstrap CSS File -->
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Libraries CSS Files -->
+<link href="lib/animate/animate.min.css" rel="stylesheet">
+<link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+<link href="lib/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+
+<!-- Main Stylesheet File -->
+<link href="css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="css/home_style.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<title>비본데이즈</title>
+<!-- =======================================================
+    Theme Name: Avilon
+    Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+  ======================================================= -->
+<!-- 구글 지도 api -->
+<script type="text/javascript">
+  function init_dropsdown() {
+    $('#gnb').hover(function () {
+      $('#gnb_sub').fadeIn();
+    },
+      function () {
+        $('#gnb_sub').hide();
+      });
+  }
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script>
+  function initialize() {
+
+
+    var X_point = 37.487027; // X 좌표
+    var Y_point = 127.021989; // Y 좌표
+    var X_point2 = 37.471377; // X 좌표
+    var Y_point2 = 127.029342; // Y 좌표
+    var zoomLevel = 17; // 첫 로딩시 보일 지도의 확대 레벨
+    var markerTitle = "비본데이즈"; // 현재 위치 마커에 마우스를 올렸을때 나타나는 이름
+    var markerTitle2 = "KT서초우면연구센터";
+    var markerMaxWidth = 300; // 마커를 클릭했을때 나타나는 말풍선의 최대 크기
+
+
+
+    var myLatlng = new google.maps.LatLng(X_point, Y_point);
+    var mapOptions = {
+      zoom: zoomLevel,
+      center: myLatlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+    var myLatlng2 = new google.maps.LatLng(X_point2, Y_point2);
+    var mapOptions2 = {
+      zoom: zoomLevel,
+      center: myLatlng2,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    }
+
+    var map = new google.maps.Map(document.getElementById('map_view'), mapOptions);
+    var map2 = new google.maps.Map(document.getElementById('map_view2'), mapOptions2);
+    var marker = new google.maps.Marker({
+      position: myLatlng,
+      map: map,
+      title: markerTitle
+    });
+    var marker2 = new google.maps.Marker({
+      position: myLatlng2,
+      map: map2,
+      title: markerTitle2
+    });
+
+    var infowindow = new google.maps.InfoWindow(
+      {
+        maxWidth: markerMaxWidth
+      }
+    );
+
+    google.maps.event.addListener(marker, 'click', function () {
+      infowindow.open(map, marker);
+    });
+    google.maps.event.addListener(marker2, 'click', function () {
+      infowindow.open(map2, marker2);
+    });
+  }
+
+
+  $(document).ready(function () {
+    init_dropsdown();
+  });
+</script>
+</head>
+
+<body onload=initialize();>
+
+  <!--==========================
+    Header
+  ============================-->
+  <div id="headeringwrap">
+    <div id="headering">
+
+      <!-- 상단 English 부분 
+          <div class="nav1">
+            <a>English</a>
+        </div> -->
+      <div id="gnb">
+        <ul class="gw">
+          <li>
+            <h1>
+              <a href="beborndays.html"><img src=img/logo.png id=logo></a>
+            </h1>
+          </li>
+          <li><a href ="beborndaysCEO.html">Home</a></li>
+          <li><a>Solution</a></li>
+          <li><a>Support</a></li>
+          <li><a>주요사업</a></li>
+          <li><a>Notice</a></li>
+          <li class="headericon"><a><i class="fa fa-search"></i></a></li>
+          <li class="headericon"><a><i class="fa fa-bars"></i></a></li>
+
+        </ul>
+        <div id="gnb_sub">
+          <ul class="logo-width">
+            <li><img src=img/beborn1.png id=logo style="height:80%"></li>
+          </ul>
+          <ul class="home-width">
+              <li><a href="beborndaysCEO.html">CEO</a></li>
+              <li><a href="beborndaysvision.html">회사비전</a></li>
+              <li><a href="beborndaystimeline.html">일반현황</a></li>
+              <li><a href="beborndayspeople.html">인재상</a></li>
+              <li><a href="beborndaysorgan.html">조직도</a></li>
+              <li><a href="beborndaysmap.html">찾아오시는길</a></li>
+          </ul>
+          <ul class="solution-width">
+            <li><a>현장공정지원시스템(BB SIMS)</a></li>
+            <li><a>시설물관리시스템(BB OMS)</a></li>
+            <li><a>설계/내역지원시스템(BB Design)</a></li>
+            <li><a>통합관제시스템(BB All-IN-OSP)</a></li>
+            <li><a>현장모바일지원시스템(BB Mobile)</a></li>
+            <li><a>현장지원3D시스템(BB 3D)</a></li>
+          </ul>
+          <ul class="support-width">
+            <li><a>시스템 메뉴얼</a></li>
+            <li><a>Demo 동영상</a></li>
+            <li><a>Demo EXE</a></li>
+            <li><a>자재/인건비</a></li>
+            <li><a>사용자 인증</a></li>
+            <li><a>FAQ</a></li>
+          </ul>
+          <ul class="important-width">
+            <li><a>통신시설관련 사업</a></li>
+            <li><a>R&D 연구사업</a></li>
+            <li><a>글로벌 사업</a></li>
+            <li><a>유지보수 사업</a></li>
+          </ul>
+          <ul class="notice-width">
+            <li><a>PRESS</a></li>
+            <li><a>NEW</a></li>
+            <li><a>PROJECT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+
+    <div class="intro-text">
+      <h2>Smart City를 선도하는</h2>
+      <h2>GIS 전문회사</h2>
+      <!-- <a href="#about" class="btn-get-started scrollto">Get Started</a> -->
+      <ul>
+        <li id="circle">
+          <a href="beborndaysCEO.html">
+            <img src="img/ceo.png" style="width:40;height:40;position: relative; top:20px; filter: invert(100%);">
+            <div id="circle_id">CEO인사말</div>
+          </a>
+        </li>
+
+        <li id="circle">
+          <a href="beborndaysvision.html">
+            <img src="img/light.png" style="width:40;height:40;position: relative; top:20px; filter: invert(100%);">
+            <div id="circle_id2">회사 비전</div>
+          </a>
+        </li>
+        <li id="circle">
+          <a href="beborndays.html">
+            <img src="img/group.png" style="width:40;height:40;position: relative; top:20px; filter: invert(100%);">
+            <div id="circle_id3">소통/혁신</div>
+          </a>
+        </li>
+      </ul>
+
+      <!-- <div class="product-screen-1 wow fadeInUp" data-wow-delay="0.4s" data-wow-duration="0.6s">
+        <img src="img/firstpage.png" alt="">
+      </div>
+
+      <div class="product-screen-2 wow fadeInUp" data-wow-delay="0.2s" data-wow-duration="0.6s">
+        <img src="img/firstpage2.png" alt="">
+      </div>
+
+      <div class="product-screen-3 wow fadeInUp" data-wow-duration="0.6s">
+        <img src="img/firstpage3.png" alt="">
+      </div> -->
+
+    </div>
+
+    <li style="list-style:none;"><a href="#about" class="right-to-go"><span>소개</span></a></li>
+
+    <span class="pointer" style="opacity:0.5; margin-left:-70;"><img src="img/mouse.png"
+        style="width:150px; height: 150px;"></span>
+
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      CEO Message Section
+    ============================-->
+    <section id="about" class="ceomessage-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">CEO Message</h3>
+          <span class="section-divider"></span>
+          <p class="section-description" style="font-weight:bold">
+            오늘보다 더 나은 내일을 만들고 꿈꾸는 테크놀러지.<br>
+
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 about-img wow fadeInLeft">
+            <p style="text-align:right;">
+              <img src="img/admin.jpg" alt="">
+            </p>
+          </div>
+
+          <div class="col-lg-6 content wow fadeInRight">
+            <img src="img/newber.png" alt="인사말" style="width:450px;">
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Product Featuress Section
+    ============================-->
+    <section id="features">
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8 offset-lg-4">
+            <div class="section-header wow fadeIn" data-wow-duration="1s">
+              <h3 class="section-title">Beborndays Features</h3>
+              <span class="section-divider"></span>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-5 features-img">
+            <img src="img/bebornmean.png" alt="" class="wow fadeInLeft">
+          </div>
+
+          <div class="col-lg-8 col-md-7 ">
+
+            <div class="row">
+
+              <div class="col-lg-6 col-md-6 box wow fadeInRight">
+                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+                <h4 class="title"><a>Meaning of CI</a></h4>
+                <p class="description">비본데이즈의 CI는 생명력, 생산성에 키워드를 둔 디자인입니다. 원은 생명의 시작, 창조의 의미를 가지고 있습니다. 창조를 통해 새로운 생명을
+                  키워나가는 비본데이즈의 이념을 담았습니다.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.1s">
+                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+                <h4 class="title"><a>Color</a></h4>
+                <p class="description">Red는 열정과 Red Hands(손도장)의 약속, 고객과의 약속을 의미합니다. Black은 세상의 중심, 기본을 의미합니다. 이 두가지 색의
+                  조화를 통해 고객 중심의 마음을 담았습니다.</p>
+              </div>
+              <!-- <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.2s">
+                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+                <h4 class="title"><a href="">BB report</a></h4>
+                <p class="description">기본 테이블을 사용자가 직접 설계하여 대용량 데이터를 원하는 필드에 지정하여 반복적 서류작업에 용이하게 사용할 수 있습니다.</p>
+              </div>
+              <div class="col-lg-6 col-md-6 box wow fadeInRight" data-wow-delay="0.3s">
+                <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+                <h4 class="title"><a href="">ATACAMA</a></h4>
+                <p class="description">통신 인프라의 설계부터 관제까지 하나의 시스템에서 통합관리할 수 있는 차세대 OSP관리 시스템을 만나보세요.</p>
+              </div> -->
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- #features -->
+
+    <!--==========================
+      Product Advanced Featuress Section
+    ============================-->
+    <section id="advanced-features">
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right wow fadeInRight" src="img/lifecycle.png" alt="">
+              <div class="wow fadeInLeft">
+                <h2>ONE STOP</h2>
+                <h3>?</h3>
+                <i class="wow fadeInRight" data-wow-duration="0.5s"></i>
+                <p>BB SIMS는 각 현장에서 발생되는 자료의 서식들이 공통화되고 필요한 자료를 손쉽고 정확히, 그리고 신속하게 추출할 수 있도록 구성되어 있습니다.
+                  BB SIMS를 통해서 현장 공정관리의 합리화를 추구할 수 있으며 발주처의 반복되는 업무가 현저히 감소해 현장공정관리 업무를 보다 체계적으로 관리하도록 합니다.</p>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-left wow fadeInLeft" src="img/gissystem.png" alt="">
+              <div class="wow fadeInRight">
+                <h2>GIS SYSTEM</h2>
+                <h3>GIS SYSTEM이란?</h3>
+                <i class="wow fadeInRight" data-wow-duration="0.5s"></i>
+                <p class="wow fadeInRight" data-wow-duration="0.5s">Push Sever를 통해 새문서,결제 등의 이벤트 발생시
+                  각 사용자에게 알림서비스를 제공함으로 실시간 업무 확인 및 처리가능합니다.
+                  결제라인 생성하여 특정 사용자를 선택하여 선택자에게만 확인 요청 및 결제 확인 각각의 일정을 등록하여 서로간의 업무 파악에 용이합니다.
+                  업무용 시스템이 필요한 기업, 일정 공유가 필요한 단체, 특히 사내 시스템 구축에 비용을 투자하기 부담스러운 중소기업, 벤처기업에 유용하게 사용할 수 있습니다.</p>
+                <!-- <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s"
+                  data-wow-duration="0.5s"></i>
+                <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                  voluptate velit esse cillum.</p>
+                <i class="ion-ios-barcode-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Quis nostrud exercitation
+                  ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                  voluptate velit esse cillum.</p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-row section-bg">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <img class="advanced-feature-img-right wow fadeInRight" src="img/사진/검색기능.png" alt="">
+              <div class="wow fadeInLeft">
+                <h2>BB Report</h2>
+                <h3>BB Report란?</h3>
+
+
+                <i class="wow fadeInRight" data-wow-duration="0.5s"></i>
+                <p>BB Report는 대용량의 데이터를 카테고리화하고 요약하여 집계 및 출력할 수 있습니다. 또한 설정한 카테고리에
+                  대해서 여러가지 양식으로 데이터 집계 및 출력이 가능합니다. 기본 Table에 설정하기 때문에 전체 출력물 양식의 모든 행과 열 간격을 수정할 수 있습니다. 한번 생성한 폼을 바탕으로
+                  데이터를 특정 필드 Mapping을 통하여 사용자가 원하는 출력물로 대용량의 데이터를 처리할 수 있습니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section><!-- #advanced-features -->
+
+
+
+    <!--==========================
+      More Features Section
+    ============================-->
+    <section id="more-features" class="features-row">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">More Features</h3>
+          <span class="section-divider"></span>
+          <p class="section-description" style="text-align: center"></p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft"><a href="img/gissystem.png">
+                <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+                <h4 class="title"><a href="">BB SIMS</a></h4>
+                <p class="description">공사/시설관리 업무를 통합적으로 처리함으로써 자원관리의 효율화 및 업무처리를 체계적으로 관리하세요.</p>
+            </div></a>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+              <h4 class="title"><a href="">BB SMART</a></h4>
+              <p class="description">당신을 위한 또 다른 경쟁력, BB SMART기업에서 단체 알림 서비스로 커뮤니케이션 강화, 일정공유를 하세요.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInLeft">
+              <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+              <h4 class="title"><a href="">BB Report</a></h4>
+              <p class="description">기본 테이블을 사용자가 설계하여 데이터를 원하는 필드에 지정해 반복 서류작업에 용이하게 사용할 수 있습니다.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="box wow fadeInRight">
+              <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+              <h4 class="title"><a href="">ATACAMA</a></h4>
+              <p class="description">통신 인프라의 설계부터 관제까지 하나의 시스템에서 통합관리할 수 있는 차세대 OSP관리 시스템을 만나보세요.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- #more-features -->
+
+    <!--==========================
+      Clients
+    ============================-->
+    <section id="clients">
+      <div class="container">
+
+        <div class="row wow fadeInUp">
+
+          <div class="col-md-2">
+            <img src="img/olleh-KT-ci.jpg" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="img/KIPO.jpg" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="img/imc_bl9NJ95FcM7rh6v9.jpg" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="img/koita.jpg" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="img/kibo.jpg" alt="">
+          </div>
+
+          <div class="col-md-2">
+            <img src="img/kova.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section><!-- #more-features -->
+
+    <!--==========================
+      MSP Section
+    ============================-->
+    <section id="map" class="ceomessage-bg">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">오시는 길</h3>
+          <span class="section-divider"></span>
+          <p class="section-description" style="font-weight:bold">
+            오늘보다 빛나는 내일을 만듭니다.<br>
+
+          </p>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 about-img wow fadeInLeft">
+            <div id="map_view" style="width:500px;height:300px;margin:0 auto;">
+
+            </div>
+
+
+          </div>
+
+          <div class="col-lg-6 content wow fadeInRight">
+            <div id="map_view2" style="width:500px;height:300px;margin:0 auto;">
+
+            </div>
+
+          </div>
+
+        </div>
+    </section><!-- #Map -->
+
+
+    <!--==========================
+      Frequently Asked Questions Section
+    ============================-->
+    <section id="faq">
+      <div class="container">
+
+        <div class="section-header">
+          <h3 class="section-title">자주 묻는 질문</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">비본데이즈에 대하여 궁금하신 부분을 알려드립니다.</p>
+        </div>
+
+        <ul id="faq-list" class="wow fadeInUp">
+          <li>
+            <a data-toggle="collapse" class="collapsed" href="#faq1">무엇을 만드는 회사인가요?<i
+                class="ion-android-remove"></i></a>
+            <div id="faq1" class="collapse" data-parent="#faq-list">
+              <p>
+                실생활에 사용되는 여러 소프트웨어를 전문적으로 제작하는 회사입니다.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq2" class="collapsed">질문을 어떻게 적어야할까요?<i
+                class="ion-android-remove"></i></a>
+            <div id="faq2" class="collapse" data-parent="#faq-list">
+              <p>
+                고민해봐야겠어요.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq3" class="collapsed">차세대 선로 시스템이 무엇인가요?<i
+                class="ion-android-remove"></i></a>
+            <div id="faq3" class="collapse" data-parent="#faq-list">
+              <p>
+                차세대 선로 시스템이란
+              </p>
+            </div>
+          </li>
+
+          <!-- <li>
+            <a data-toggle="collapse" href="#faq4" class="collapsed">Ac odio tempor orci dapibus. Aliquam eleifend mi in
+              nulla? <i class="ion-android-remove"></i></a>
+            <div id="faq4" class="collapse" data-parent="#faq-list">
+              <p>
+                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id
+                donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit
+                ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Tempus quam pellentesque nec nam aliquam sem et
+              tortor consequat? <i class="ion-android-remove"></i></a>
+            <div id="faq5" class="collapse" data-parent="#faq-list">
+              <p>
+                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc
+                vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus
+                gravida quis blandit turpis cursus in
+              </p>
+            </div>
+          </li>
+
+          <li>
+            <a data-toggle="collapse" href="#faq6" class="collapsed">Tortor vitae purus faucibus ornare. Varius vel
+              pharetra vel turpis nunc eget lorem dolor? <i class="ion-android-remove"></i></a>
+            <div id="faq6" class="collapse" data-parent="#faq-list">
+              <p>
+                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada
+                nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis
+                tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas
+                fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
+              </p>
+            </div>
+          </li> -->
+          <!--여기는 나머지 질문부분-->
+
+        </ul>
+
+      </div>
+    </section><!-- #faq -->
+
+    <!-- ==========================
+      Our Team Section
+    ============================-->
+    <section id="team" class="section-bg">
+      <div class="container">
+        <div class="section-header">
+          <h3 class="section-title">회사 연혁</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">소프트웨어 개발 기간 28년, 한 길 만을 걸어왔습니다.</p>
+
+        </div>
+        <div class="row wow fadeInUp">
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/history1.png" alt=""></div>
+              <h4>1992~2002</h4>
+              <!-- <span>Chief Executive Officer</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/history2.png" alt=""></div>
+              <h4>2003~2005</h4>
+              <!-- <span>Product Manager</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/history3.png" alt=""></div>
+              <h4>2006~2011</h4>
+              <!-- <span>CTO</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="member">
+              <div class="pic"><img src="img/history4.png" alt=""></div>
+              <h4>2012~미래</h4>
+              <!-- <span>Accountant</span>
+              <div class="social">
+                <a href=""><i class="fa fa-twitter"></i></a>
+                <a href=""><i class="fa fa-facebook"></i></a>
+                <a href=""><i class="fa fa-google-plus"></i></a>
+                <a href=""><i class="fa fa-linkedin"></i></a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- #team
+
+    <!--==========================
+      Gallery Section
+    ============================-->
+    <section id="Copyright">
+      <div class="container-fluid">
+        <div class="section-header">
+          <h3 class="section-title">Copyright</h3>
+          <span class="section-divider"></span>
+          <p class="section-description">저작권은 비본데이즈의 자산이자 경쟁력입니다. </p>
+        </div>
+
+        <div class="row no-gutters">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/Title of the invention.png" class="gallery-popup">
+                <img style="width:300px;" src="img/Title of the invention.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/Title of the invention2.png" class="gallery-popup">
+                <img style="width:300px;" src="img/Title of the invention2.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/Title of the invention3.png" class="gallery-popup">
+                <img style="width:300px;" src="img/Title of the invention3.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/Title of the invention4.png" class="gallery-popup">
+                <img style="width:300px;" src="img/Title of the invention4.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/Title of the invention5.png" class="gallery-popup">
+                <img style="width:300px;" src="img/Title of the invention5.png" alt="">
+              </a>
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4 col-md-6">
+            <div class="gallery-item wow fadeInUp">
+              <a href="img/bebornprize.jpg" class="gallery-popup">
+                <img src="img/bebornprize.jpg" alt="">
+              </a>
+            </div>
+          </div> -->
+
+        </div>
+
+      </div>
+    </section><!-- #gallery -->
+    <!--==========================
+      Call To Action Section
+    ============================-->
+    <section id="call-to-action">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3 class="cta-title">더 알아보기</h3>
+            <p class="cta-text">회사에 대하여 더 궁금하신점이 있다면 버튼을 클릭해주세요.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="http://www.cable04.com">Beborndays</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- #call-to-action -->
+
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact">
+      <div class="container">
+        <div class="row wow fadeInUp">
+
+          <div class="col-lg-4 col-md-4">
+            <div class="contact-about">
+              <h3>Beborndays</h3>
+              <p>보내주신 소중한 의견은 빠른 시일내에 담당자가 메일 혹은 전화로 연락을 드리겠습니다.</p>
+              <div class="social-links">
+                <a href="https://www.twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com" class="instagram"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.google.co.kr" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-4">
+            <div class="info">
+              <div>
+                <i class="ion-ios-location-outline"></i>
+                <p>서울특별시 서초구 효령로<br>349-5 3층(서초동,비본데이즈)</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-paper-outline"></i>
+                <p>FAX : 02-585-0109</p>
+              </div>
+
+              <div>
+                <i class="ion-ios-telephone-outline"></i>
+                <p>02-568-0109</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 col-md-8">
+            <div class="form">
+              <div id="sendmessage">Your message has been sent. Thank you!</div>
+              <div id="errormessage"></div>
+              <form action="" method="post" role="form" class="contactForm">
+                <div class="form-row">
+                  <div class="form-group col-lg-6">
+                    <input type="text" name="name" class="form-control" id="name" placeholder="이름" data-rule="minlen:2"
+                      data-msg="두 글자 이상 적어주세요." />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group col-lg-6">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="이메일" data-rule="email"
+                      data-msg="이메일을 적어주세요." />
+                    <div class="validation"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" name="subject" id="subject" placeholder="제목"
+                    data-rule="minlen:3" data-msg="세 글자 이상 적어주세요." />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" name="message" rows="5" data-rule="required"
+                    data-msg="비본데이즈에게 하고 싶은 말을 적어주세요!" placeholder="내용"></textarea>
+                  <div class="validation"></div>
+                </div>
+                <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 text-lg-left text-center">
+          <div class="copyright">
+            대표번호 : 02-568-0109 FAX : 02-585-0109
+            <p><strong>대표 : 김종회</strong> | 서울 특별시 서초구 효령로 349-5 3층(서초동,비본데이즈)</p>
+            <p>/ 서초구 서초동 1605-4 3층</p>
+          </div>
+          <div class="credits">
+            <!--
+              All the links in the footer should remain intact.
+              You can delete the links only if you purchased the pro version.
+              Licensing information: https://bootstrapmade.com/license/
+              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
+            -->
+            Designed by <a href="http://www.beborndays.com">Beborndays</a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <nav class="footer-linkws text-lg-right text-center pt-2 pt-lg-0">
+            <a href="#intro" class="scrollto">Home</a>
+            <a href="#about" class="scrollto">About</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Use</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/magnific-popup/magnific-popup.min.js"></script>
+
+  <!-- Contact Form JavaScript File -->
+  <script src="contactform/contactform.js"></script>
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/home_style.css">
+    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <title>비본데이즈</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/dropdown.js"></script>
+      <!-- 드랍다운 스크립트 -->
+  <script type="text/javascript">
+    function init_dropsdown() {
+      $('#gnb').hover(function () {
+        $('#gnb_sub').fadeIn();
+      },
+        function () {
+          $('#gnb_sub').hide();
+        });
+    }
+    $(document).ready(function () {
+    init_dropsdown();
+  });
+  </script>
+
+</head>
+
+<body>
+  <div id="headeringwrap">
+    <div id="headering">
+
+      <!-- 상단 English 부분 
+          <div class="nav1">
+            <a>English</a>
+        </div> -->
+      <div id="gnb">
+        <ul class="gw">
+          <li>
+            <h1>
+              <a href="beborndays.html"><img src=img/logo.png id=logo></a>
+            </h1>
+          </li>
+          <li><a>Home</a></li>
+          <li><a>Solution</a></li>
+          <li><a>Support</a></li>
+          <li><a>주요사업</a></li>
+          <li><a>Notice</a></li>
+          <li class="headericon"><a><i class="fa fa-search"></i></a></li>
+          <li class="headericon"><a><i class="fa fa-bars"></i></a></li>
+
+        </ul>
+        <div id="gnb_sub">
+          <ul class="logo-width">
+            <li><img src=img/beborn1.png id=logo style="height:80%"></li>
+          </ul>
+          <ul class="home-width">
+            <li><a href="beborndaysCEO.html">CEO</a></li>
+            <li><a href="beborndaysvision">회사비전</a></li>
+            <li><a href="beborndaystimeline.html">일반현황</a></li>
+            <li><a href="beborndayspeople.html">인재상</a></li>
+            <li><a href="beborndaysorgan.html">조직도</a></li>
+            <li><a href="beborndaysmap.html">찾아오시는길</a></li>
+          </ul>
+          <ul class="solution-width">
+            <li><a>현장공정지원시스템(BB SIMS)</a></li>
+            <li><a>시설물관리시스템(BB OMS)</a></li>
+            <li><a>설계/내역지원시스템(BB Design)</a></li>
+            <li><a>통합관제시스템(BB All-IN-OSP)</a></li>
+            <li><a>현장모바일지원시스템(BB Mobile)</a></li>
+            <li><a>현장지원3D시스템(BB 3D)</a></li>
+          </ul>
+          <ul class="support-width">
+            <li><a>시스템 메뉴얼</a></li>
+            <li><a>Demo 동영상</a></li>
+            <li><a>Demo EXE</a></li>
+            <li><wa>자재/인건비</a></li>
+            <li><a>사용자 인증</a></li>
+            <li><a>FAQ</a></li>
+          </ul>
+          <ul class="important-width">
+            <li><a>통신시설관련 사업</a></li>
+            <li><a>R&D 연구사업</a></li>
+            <li><a>글로벌 사업</a></li>
+            <li><a>유지보수 사업</a></li>
+          </ul>
+          <ul class="notice-width">
+            <li><a>PRESS</a></li>
+            <li><a>NEW</a></li>
+            <li><a>PROJECT</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+    
+</body>
+</html>
+
+
+
+<!-- <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+         <img class="#intro" src="img/logo.png" alt=""> 
+        <h1><a href="#intro" class="scrollto"><img src="img/logo.png"></a></h1>
+         Uncomment below if you prefer to use an image logo 
+        <a href="#intro"><img src="img/logo.png" alt="" title=""></a> 
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">CEO Message</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#map">Map</a></li>
+           <li><a href="#team">Team</a></li> 
+          <li><a href="#Copyright">Copyright</a></li>
+           DropDown menu
+          <li class="menu-has-children"><a href="">Drop Down</a>
+            <ul>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="menu-has-children"><a href="#">Drop Down 2</a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
+              <li><a href="#">Drop Down 5</a></li>
+            </ul>
+          </li> 
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </nav> #nav-menu-container 
+    </div>
+  </header>-->
